@@ -7,5 +7,36 @@
  */
 
 function program() {
-
+    const radius = Number(prompt('Quel est le rayon  ?:'));
+    const area = diskArea(radius);
+    window.alert('Aire du disque : ' + area + ' cm2');
 }
+
+
+
+
+
+function diskArea(radius) {
+    if (checkRadius(radius)) {
+      const area = roundToTwo(Math.PI * radius * radius);
+  
+      console.log("Rayon :" + radius + "  area : " + area);
+  
+      return area;
+    }
+    console.log(radius);
+    return false;
+  }
+  
+  function checkRadius(radius) {
+    if (isNaN(radius)) {
+      console.log("Rayon =NaN :" + radius);
+      return false;
+    }
+    if (Number(radius) < 1) {
+      console.log("Rayon <= à 0 :" + radius);
+      return false;
+    }
+    return true;
+  }
+program();

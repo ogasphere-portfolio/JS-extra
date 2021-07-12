@@ -9,4 +9,8 @@
 
 function random0to10() {
 
+    const tirageAuSort =  Math.floor(Math.random() * 10);
+    console.log('nb :'+tirageAuSort);
+    return tirageAuSort;
 }
+

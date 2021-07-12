@@ -7,6 +7,7 @@
  *   bonjour('Toto'); // => doit afficher "Bonjour Toto !" en console
  */
 
-function bonjour() {
-
+function bonjour(monNom) {
+  console.log('Bonjour '+monNom+' !');
 }
+bonjour('Olivier')
